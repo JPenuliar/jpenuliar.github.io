@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Dynamic SQL Formatter</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link the CSS file -->
 </head>
 <body>
     <h1>SQL prettify and format</h1>
 
     <!-- Configuration Options Section -->
-    <div style="margin-bottom: 15px;">
+    <div class="config-container">
         <label for="dialectSelect">Dialect:</label>
         <select id="dialectSelect" onchange="formatSql()">
             <option value="mysql">MySQL</option>
@@ -19,7 +20,7 @@
             <option value="standard">Standard SQL</option>
         </select>
 
-        <label for="caseSelect" style="margin-left: 20px;">Keyword case:</label>
+        <label for="caseSelect">Keyword case:</label>
         <select id="caseSelect" onchange="formatSql()">
             <option value="upper">UPPERCASE</option>
             <option value="lower">lowercase</option>
@@ -29,11 +30,12 @@
     <label for="inputSql">Your SQL query:</label><br>
     <textarea id="inputSql" rows="10" cols="50" oninput="formatSql()">select field1, field2, field3 from my_table where my_condition;</textarea><br>
     
-    <!-- We don't need a button anymore; formatting happens automatically on input/change -->
+    <label for="outputSql">Prettified version of your query:</label>
+    <button onclick="copyToClipboard()" style="float: right;">Copy</button><br>
 
-    <label for="outputSql">Prettified version of your query:</label><br>
-    <pre><code id="outputSql"></code></pre>
+    <pre id="outputContainer"><code id="outputSql"></code></pre>
 
+    <!-- Include the sql-formatter library via CDN and the app logic -->
     <script src="unpkg.com"></script>
     <script src="app.js"></script>
 </body>
