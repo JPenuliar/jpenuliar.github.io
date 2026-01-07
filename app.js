@@ -1,4 +1,4 @@
-// The library is available as a global variable 'sqlFormatter'
+// The library is available as a global variable 'sqlFormatter' when included via CDN
 const format = window.sqlFormatter.format;
 
 function formatSql() {
