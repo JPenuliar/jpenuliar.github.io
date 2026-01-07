@@ -1,0 +1,70 @@
+/* Basic Reset & Body Styling */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8fafb; /* Light background matching the site */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 24px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Container for configuration options */
+.config-container {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #555;
+}
+
+/* Styling for Select and Textarea inputs */
+select, textarea {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box; /* Ensures padding doesn't increase width */
+}
+
+select {
+    background-color: #fff;
+    cursor: pointer;
+    margin-right: 20px; /* Space between the dropdowns */
+}
+
+textarea#inputSql {
+    width: 100%;
+    min-height: 200px;
+    resize: vertical; /* Allow vertical resizing */
+    font-family: monospace; /* Monospaced font for code input */
+}
+
+/* Styling for the Output Area (Prettified SQL) */
+pre code#outputSql {
+    display: block; /* Make the code block fill its container */
+    padding: 15px;
+    background-color: #ecf0f1; /* Light gray background for output */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 200px;
+    white-space: pre; /* Preserve whitespace and line breaks */
+    word-wrap: normal;
+    overflow-x: auto; /* Add horizontal scroll for long SQL lines */
+    font-family: monospace;
+    color: #34495e;
+}
